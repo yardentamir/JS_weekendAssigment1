@@ -1,10 +1,11 @@
 (function () {
   "use strict";
-  const binaryFunc = (binary) => {
-    return parseInt(binary.join(""), 2);
+
+  const findNextSquare = (square) => {
+    if (Number.isInteger(Math.sqrt(square)))
+      return (Math.sqrt(square) + 1) ** 2;
+    else return -1;
   };
 
-  console.log(binaryFunc([1, 0, 1, 1]));
-  console.log(binaryFunc([0, 0, 1, 0]));
-  console.log(binaryFunc([0, 1, 1, 0]));
+  console.log(findNextSquare(625));
 })();

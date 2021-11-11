@@ -4,5 +4,5 @@
     return myBool ? "ןכ" : "אל";
   };
 
-  console.log(trueOrFalse(false));
+  console.log(trueOrFalse(true));
 })();
