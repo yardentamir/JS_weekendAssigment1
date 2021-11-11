@@ -1,13 +1,12 @@
 (function () {
   "use strict";
 
-  const IS_FIRST_YEAR = true;
   const nb_year = (p0, percent, aug, p) => {
-    if (IS_FIRST_YEAR) {
-      IS_FIRST_YEAR = false;
-      p0 + p0 * (percent / 100) + 50;
-    } else p0 + p0 * (percent / 100) + 50;
+    let i = 0;
+    for (; p0 <= p; i++) p0 = p0 + p0 * (percent / 100) + aug;
+    return i;
   };
 
   console.log(nb_year(1500, 5, 100, 5000));
+  console.log(nb_year(1500000, 2.5, 10000, 2000000));
 })();
