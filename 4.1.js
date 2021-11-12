@@ -14,5 +14,5 @@
     return fib;
   };
 
-  console.log(fibonacci(15, 1));
+  console.log(fibonacci(5, 1));
 })();
