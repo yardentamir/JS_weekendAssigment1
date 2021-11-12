@@ -5,4 +5,5 @@
   };
 
   console.log(trueOrFalse(true));
+  console.log(trueOrFalse(false));
 })();
