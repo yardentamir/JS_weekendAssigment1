@@ -13,7 +13,6 @@
   };
 
   // solution2
-
   const peopleOnTheBus2 = (array) => {
     return array.reduce(
       (previousValue, [inTheBus, outTheBus]) =>

@@ -2,7 +2,7 @@
   "use strict";
 
   const basicOp = (operation, num1, num2) => {
-    return eval(num1.toString() + operation + num2.toString());
+    return eval(num1 + operation + num2);
   };
 
   console.log(basicOp("-", 15, 18));
