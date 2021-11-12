@@ -1,15 +1,13 @@
 (function () {
   "use strict";
 
-  const tribonacci = (n, s) => {
-    let trib = [];
-    s === 0 ? (trib = [0, 0, 1]) : (trib = [1, 1, 1]);
-
+  const tribonacci = (n, signature) => {
     for (let i = 0; i < n - 3; i++) {
-      trib.push(trib[i] + trib[i + 1] + trib[i + 2]);
+      signature.push(signature[i] + signature[i + 1] + signature[i + 2]);
     }
-    return trib;
+    return signature;
   };
 
-  console.log(tribonacci(10, 0));
+  console.log(tribonacci(10, [1, 1, 1]));
+  console.log(tribonacci(10, [0, 0, 1]));
 })();
