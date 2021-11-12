@@ -2,17 +2,15 @@
   "use strict";
 
   const fibonacci = (n, s) => {
-    let fib = [],
-      pos = 2;
+    let fib = [];
 
     s === 0 ? (fib = [0, 1]) : (fib = [1, 1]);
 
-    for (s = 3; s <= n; s++) {
-      fib[pos] = fib[pos - 2] + fib[pos - 1];
-      pos++;
+    for (let i = 2; i <= n - 1; i++) {
+      fib.push(fib[i - 2] + fib[i - 1]);
     }
     return fib;
   };
 
-  console.log(fibonacci(5, 1));
+  console.log(fibonacci(10, 0));
 })();
