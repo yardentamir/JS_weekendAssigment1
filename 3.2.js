@@ -1,16 +1,15 @@
 (function () {
   "use strict";
 
-  const number = function (array) {
-    let peopleIn = 0;
+  const peopleOnTheBus = function (array) {
+    let peopleOn = 0;
     let peopleOut = 0;
     for (let i = 0; i < array.length - 1; i++) {
-      peopleIn += array[i][0];
+      peopleOn += array[i][0];
       peopleOut += array[i][1];
     }
-    return peopleIn - peopleOut;
+    return peopleOn - peopleOut;
   };
-  console.log(number(array));
 
   console.log(
     peopleOnTheBus([
