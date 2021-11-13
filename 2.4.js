@@ -15,14 +15,16 @@
 
   // solution2
   const findUniq2 = (arr) => {
-    return arr.reduce((perv, cur, i) => {
+    return arr.reduce((perv, cur, i, arr) => {
       if (perv !== cur) {
-        arr.splice(i);
-        return cur;
+        if(perv === arr[i+1]) {
+          arr.splice(i);
+          return cur;
+        }
       } else return perv;
     });
   };
 
-  console.log(findUniq([1, 1, 1, 2, 1, 1]));
+  console.log(findUniq([1, 1, 1, 1, 2, 1]));
   console.log(findUniq2([2, 2, 2, 5, 2, 2]));
 })();

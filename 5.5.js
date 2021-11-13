@@ -1,6 +1,7 @@
 (function () {
   "use strict";
 
+  // solution1
   const toInitials = (sentence) => {
     let initials = "";
     const wordsArr = sentence.split(" ");
@@ -11,6 +12,14 @@
     return initials;
   };
 
+// solution2
+  const toInitials2 = (sentence) => {
+    return sentence.split(" ").map(x => x[0]).join(".");
+  }
+
   console.log(toInitials("Sam Harris"));
   console.log(toInitials("Patrick Feeney"));
+
+  console.log(toInitials2("Sam Harris"));
+  console.log(toInitials2("Patrick Feeney"));
 })();

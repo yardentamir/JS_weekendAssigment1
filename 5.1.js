@@ -5,4 +5,5 @@
   };
 
   console.log(cutString("hello"));
+  console.log(cutString2("hello"));
 })();
