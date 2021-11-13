@@ -6,6 +6,7 @@
     for (let i = 1; i <= n; i++) sum += i;
     return sum;
   };
+  
   // solution2
   const summation2 = (n) => {
     if (n < 2) return n;

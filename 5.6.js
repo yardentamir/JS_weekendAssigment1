@@ -4,19 +4,13 @@
   // solution1
   const maskify = (string) => {
     let newStr = "";
-    for (let i = 0; i < string.length - 4; i++) {
-      newStr += "#";
-    }
-
-    for (let i = 4; i > 0; i--) {
-      newStr += string[string.length - i];
-    }
-
+    for (let i = 0; i < string.length - 4; i++) newStr += "#";
+    for (let i = 4; i > 0; i--) newStr += string[string.length - i];
     return newStr;
   };
 
   // solution2
-  const maskify2 = function (string) {
+  const maskify2 = (string) => {
     return string.slice(0, -4).replace(/./g, "#") + string.slice(-4);
   };
 
