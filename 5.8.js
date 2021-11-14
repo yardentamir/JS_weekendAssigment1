@@ -4,7 +4,8 @@
   const lengthOfLongestWords = (arr) => arr.sort((a, b) => b.length - a.length)[0].length;
 
   // solution1
-  const LongestWords = (wordsArray) => {
+  const LongestWords = (str) => {
+    const wordsArray = str.split(' ');
     let arrOfLongestWords = [];
     const lengthLongest = lengthOfLongestWords(wordsArray);
     for (let i = 0; i < wordsArray.length; i++) 
@@ -12,37 +13,14 @@
     return arrOfLongestWords;
   }
   // solution2
-  const LongestWords2 =  (wordsArray) => {
+  const LongestWords2 =  (str) => {
+    const wordsArray = str.split(' ');
     const lengthLongest = lengthOfLongestWords(wordsArray);
     return wordsArray.filter(word => word.length === lengthLongest);
   }
 
 
-  console.log(
-    LongestWords([
-      "one",
-      "two",
-      "three",
-      "four",
-      "five",
-      "six",
-      "seven",
-      "eight",
-      "nine",
-    ])
-  );
+  console.log(LongestWords("one two three four five six seven eight nine"));
 
-  console.log(
-    LongestWords2([
-      "one",
-      "two",
-      "three",
-      "four",
-      "five",
-      "six",
-      "seven",
-      "eight",
-      "nine",
-    ])
-  );
+  console.log(LongestWords2("one two three four five six seven eight nine"));
 })();
