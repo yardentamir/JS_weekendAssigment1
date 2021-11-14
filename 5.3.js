@@ -14,7 +14,7 @@
   //solution2
   const toCamelCase2 = (sentence) => {
     let wordsArr = sentence.split(/[^A-Za-z]/);
-    return wordsArr[0] + wordsArr.filter((word, i )=> i !== 0)
+    return wordsArr[0] + wordsArr.slice(1)
     .map(word => word[0].toUpperCase() + word.slice(1,word.length)).join('');
   }
 
